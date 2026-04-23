@@ -1,0 +1,353 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+}
+
+/* HEADER */
+header {
+  background: rgba(46, 125, 50, 0.9);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1558788353-f76d92427f16');
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  max-width: 600px;
+}
+
+/* BUTTONS */
+.hero-buttons button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #2e7d32;
+  color: white;
+}
+
+/* SECOND BUTTON */
+.secondary {
+  background: white;
+  color: #2e7d32;
+}
+
+/* HOVER EFFECT */
+.hero-buttons button:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* FOOTER */
+footer {
+  background: #2e7d32;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* SECTIONS */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* SERVICES */
+/* SERVICES PAGE BACKGROUND */
+body {
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+              url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* FORM */
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  background: #2e7d32;
+  color: white;
+  padding: 10px;
+}
+
+#about {
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+              url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e');
+
+  background-size: cover;
+  background-position: center;
+}
+.about-section {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.about-section h2, 
+.about-section h3 {
+  color: #2e7d32;
+}
+
+.about-section ul {
+  padding-left: 20px;
+}
+
+#about {
+  background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+              url('https://images.unsplash.com/photo-1576201836106-db1758fd1c97');
+  background-size: cover;
+}
+button:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* BACKGROUND */
+.appointment-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1576201836106-db1758fd1c97');
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* FORM BOX */
+.form-box {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-box h2 {
+  color: #2e7d32;
+}
+
+.form-box p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* INPUTS */
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTON */
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #1b5e20;
+}
+
+/* SUCCESS MESSAGE */
+#message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+/* CONTACT BACKGROUND */
+.contact-section {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e');
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* CONTAINER */
+.contact-container {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* LEFT SIDE */
+.contact-info {
+  background: #2e7d32;
+  color: white;
+  padding: 30px;
+  width: 50%;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+}
+
+/* RIGHT SIDE */
+.contact-form {
+  padding: 30px;
+  width: 50%;
+}
+
+/* FORM */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1b5e20;
+}
+
+/* FOOTER */
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Logout Button Container */
+.logout-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.logout-btn:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}

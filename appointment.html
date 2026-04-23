@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🐾 Book Appointment</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin-login.html">Admin</a>
+  </nav>
+</header>
+
+<section class="appointment-section">
+
+  <div class="form-box">
+    <h2>Schedule a Visit 🐶</h2>
+    <p>Fill in the details and we’ll take care of your pet</p>
+
+    <form id="appointmentForm">
+  <input type="text" name="ownerName" placeholder="Owner Name" required>
+  <input type="text" name="petName" placeholder="Pet Name" required>
+  <input type="text" name="petType" placeholder="Pet Type (Dog/Cat)" required>
+
+ <input type="date" name="date" id="date" required>
+ <input type="time" name="time" id="time" required>
+  <select name="service" required>
+    <option value="">Select Service</option>
+    <option>Vaccination</option>
+    <option>Surgery</option>
+    <option>Grooming</option>
+    <option>Diagnostics</option>
+    <option>Emergency</option>
+  </select>
+
+  <button type="submit">Book Appointment</button>
+</form>
+
+    <p id="message"></p>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

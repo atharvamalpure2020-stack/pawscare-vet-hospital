@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN CHECK -->
+<script>
+const isLoggedIn = localStorage.getItem("adminLoggedIn");
+
+if (isLoggedIn !== "true") {
+    alert("Please login first!");
+    window.location.href = "admin-login.html";
+}
+</script>
+
+<header>
+    <h1>📋 Admin Dashboard</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="admin-login.html">Admin</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Booked Appointments</h2>
+
+    <table border="1" align="center" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Owner Name</th>
+                <th>Pet Name</th>
+                <th>Pet Type</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Service</th>
+            </tr>
+        </thead>
+
+        <tbody id="appointmentTable"></tbody>
+    </table>
+</section>
+
+<div class="logout-container">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script>
+async function loadAppointments() {
+    try {
+        const response = await fetch("http://localhost:5000/appointments");
+        const data = await response.json();
+
+        const table = document.getElementById("appointmentTable");
+        table.innerHTML = "";
+
+        if (data.length === 0) {
+            table.innerHTML = `
+                <tr>
+                    <td colspan="6">No appointments found</td>
+                </tr>
+            `;
+            return;
+        }
+
+        data.forEach(appointment => {
+            table.innerHTML += `
+                <tr>
+                    <td>${appointment.ownerName}</td>
+                    <td>${appointment.petName}</td>
+                    <td>${appointment.petType}</td>
+                    <td>${appointment.date}</td>
+                    <td>${appointment.time}</td>
+                    <td>${appointment.service}</td>
+                </tr>
+            `;
+        });
+
+    } catch(error) {
+        console.log("Error:", error);
+    }
+}
+
+loadAppointments();
+
+function logout() {
+    localStorage.removeItem("adminLoggedIn");
+    alert("Logged out successfully!");
+    window.location.href = "admin-login.html";
+}
+</script>
+
+</body>
+</html>
